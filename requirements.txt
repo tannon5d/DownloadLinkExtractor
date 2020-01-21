@@ -6,4 +6,4 @@ Pygments==2.2.0
 pypiwin32==223
 pywin32==224
 pywin32-ctypes==0.2.0
-PyInstaller==3.4
+PyInstaller
