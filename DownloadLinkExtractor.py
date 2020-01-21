@@ -72,12 +72,14 @@ class MainApp(App):
         presentation.ids['output'].text = content
 
     def extract_links_from_raw_page(self, raw_page):
+		# TODO: make below a configurable dialog in the gui?
         patterns = [
             r'"(ed2k://[^"]+)"',
             r'"(thunder://[^"]+)"',
             r'"(magnet:[^"]+)"',
         ]
         results = []
+		# find links, deduplicate, retain the order and add line feed
         for pattern in patterns:
             match_iter = re.finditer(pattern, raw_page)
             for matched_index in match_iter:
