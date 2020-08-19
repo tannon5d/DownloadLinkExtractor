@@ -77,6 +77,9 @@ class MainApp(App):
             r'"(ed2k://[^"]+)"',
             r'"(thunder://[^"]+)"',
             r'"(magnet:[^"]+)"',
+            r"'(ed2k://[^']+)'",
+            r"'(thunder://[^']+)'",
+            r"'(magnet:[^']+)'",
         ]
         results = []
 		# find links, deduplicate, retain the order and add line feed
